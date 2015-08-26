@@ -27,6 +27,7 @@ DATABASES = {
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
+    'middleware.xss.XsSharing'
 )
 
 STATICFILES_DIRS = (
