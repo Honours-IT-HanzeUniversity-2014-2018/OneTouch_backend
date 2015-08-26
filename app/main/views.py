@@ -10,8 +10,8 @@ class MainMenu(JsonMenuView):
 
     def getMenu(self):
         return [
-            MenuItem('Televisie', icon="ios-monitor", action=reverse('television:main_menu')),
-            MenuItem('Deuren', icon="ios-home", action=reverse('doors:main_menu')),
+            MenuItem('Televisie', icon="ios-monitor", action=reverse('television:main_menu'), is_menu=True),
+            MenuItem('Deuren', icon="ios-home", action=reverse('doors:main_menu'), is_menu=True),
         ]
 
 
