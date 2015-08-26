@@ -17,7 +17,8 @@ class JsonMenuView(View):
         response = {
             'success': True,
             'type': 'menu',
-            'data': items
+            'data': items,
+            'title': self.title,
         }
 
         return HttpResponse(

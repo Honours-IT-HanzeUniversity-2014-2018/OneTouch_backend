@@ -6,6 +6,8 @@ from utils import JsonMenuView, MenuItem
 
 
 class MainMenu(JsonMenuView):
+    title = "Main menu"
+
     def getMenu(self):
         return [
             MenuItem('Televisie', icon="ios-monitor", action=reverse('television:main_menu')),
