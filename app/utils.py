@@ -7,6 +7,7 @@ import types
 class JsonMenuView(View):
     menu = []
     title = "Menu"
+    show_profile = False
 
     def getMenu(self):
         return self.menu
@@ -19,6 +20,7 @@ class JsonMenuView(View):
             'type': 'menu',
             'data': items,
             'title': self.title,
+            'show_profile': self.show_profile
         }
 
         return HttpResponse(
@@ -32,8 +34,9 @@ class MenuItem:
     icon = None
     action = None
     statuses = None
+    is_menu = False
 
-    def __init__(self, title, icon=None, action=None, statuses=None):
+    def __init__(self, title, icon=None, action=None, statuses=None, is_menu=False):
         if statuses is not None and not isinstance(statuses, types.ListType):
             raise TypeError('Statuses must be a list of applicable statuses')
 
@@ -41,3 +44,4 @@ class MenuItem:
         self.icon = icon
         self.action = action
         self.statuses = statuses
+        self.is_menu = is_menu
