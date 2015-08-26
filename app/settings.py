@@ -37,6 +37,7 @@ STATICFILES_DIRS = (
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'user',
+    'doors',
 )
 
 ALLOWED_HOSTS = (
