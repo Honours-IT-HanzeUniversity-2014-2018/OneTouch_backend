@@ -7,6 +7,7 @@ from utils import JsonMenuView, MenuItem
 
 class MainMenu(JsonMenuView):
     title = "Main menu"
+    show_profile = True
 
     def getMenu(self):
         return [
