@@ -5,7 +5,8 @@ from utils import JsonMenuView, MenuItem
 class MainMenu(JsonMenuView):
     def getMenu(self):
         return [
-            MenuItem('Zender', icon="zap"),
-            MenuItem('Aanzetten', icon="on-off", statuses=['red-icon']),
-            MenuItem('Volume', icon="volume"),
+            MenuItem('Aanzetten', icon="power", statuses=['red-icon']),
+            MenuItem('Zender', icon="grid"),
+            MenuItem('Volume +', icon="volume-high"),
+            MenuItem('Volume -', icon="volume-low"),
         ]
