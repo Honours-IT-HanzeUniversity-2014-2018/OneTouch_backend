@@ -3,6 +3,8 @@ from utils import JsonMenuView, MenuItem
 
 
 class MainMenu(JsonMenuView):
+    title = 'Televisie'
+
     def getMenu(self):
         return [
             MenuItem('Aanzetten', icon="power", statuses=['red-icon']),
