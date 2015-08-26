@@ -8,8 +8,8 @@ from utils import JsonMenuView, MenuItem
 class MainMenu(JsonMenuView):
     def getMenu(self):
         return [
-            MenuItem('Televisie', icon="television", action=reverse('television:main_menu')),
-            # MenuItem('Deuren', icon="doors", action=reverse('doors:main_menu'))
+            MenuItem('Televisie', icon="ios-monitor", action=reverse('television:main_menu')),
+            MenuItem('Deuren', icon="ios-home", action=reverse('doors:main_menu')),
         ]
 
 
