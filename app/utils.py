@@ -47,7 +47,7 @@ class JsonItemView(View):
         )
 
 
-class MenuItem:
+class MenuItem(object):
     title = None
     icon = None
     action = None
