@@ -5,10 +5,12 @@ from .models import Door
 
 class DoorMenuItem(MenuItem):
     def __init__(self, door):
-        self.name = door.name
-        self.icon = 'key'
-        self.statuses = [['status-on', 'status-off'][int(door.status)]]
-        self.action = reverse('doors:toggle_door', kwargs={'pk': door.pk})
+        super(DoorMenuItem, self).__init__(
+            door.name,
+            icon='key',
+            statuses=[['status-on', 'status-off'][int(door.status)]],
+            action=reverse('doors:toggle_door', kwargs={'pk': door.pk})
+        )
 
 class MainMenu(JsonMenuView):
     title = 'Deuren'
