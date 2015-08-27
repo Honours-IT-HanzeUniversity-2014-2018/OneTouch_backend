@@ -7,6 +7,7 @@ urlpatterns = patterns('',
                        (r'^api/v1/user/', include('user.urls', namespace='user')),
                        (r'^api/v1/television/', include('television.urls', namespace='television')),
                        (r'^api/v1/doors/', include('doors.urls', namespace='doors')),
+                       (r'^api/v1/speech/', include('speech.urls', namespace='speech')),
                        (r'^api/v1/main/', include('main.urls', namespace='main')),
 
                        (r'^admin/', include(admin.site.urls)),
