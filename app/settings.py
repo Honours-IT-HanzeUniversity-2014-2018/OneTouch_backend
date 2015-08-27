@@ -44,7 +44,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.auth',
     'django.contrib.admin',
+    'main',
     'user',
+    'doors',
+    'television',
+    'speech',
+)
+
+SPEECH_ENABLED_APPS = (
     'doors',
 )
 
