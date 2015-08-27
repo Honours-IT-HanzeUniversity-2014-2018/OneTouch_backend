@@ -27,6 +27,10 @@ DATABASES = {
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'middleware.xss.XsSharing'
 )
 
@@ -35,7 +39,11 @@ STATICFILES_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django.contrib.contenttypes',
     'django.contrib.staticfiles',
+    'django.contrib.sessions',
+    'django.contrib.auth',
+    'django.contrib.admin',
     'user',
     'doors',
 )
