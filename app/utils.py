@@ -29,6 +29,24 @@ class JsonMenuView(View):
         )
 
 
+class JsonItemView(View):
+    menu = None
+    
+    def getMenu(self):
+        return self.menu
+
+    def get(self, request, *args, **kwargs):
+        response = {
+            'success': True,
+            'data': self.getMenu().__dict__,
+        }
+
+        return HttpResponse(
+            json.dumps(response),
+            content_type="application/json"
+        )
+
+
 class MenuItem:
     title = None
     icon = None
@@ -45,3 +63,4 @@ class MenuItem:
         self.action = action
         self.statuses = statuses
         self.is_menu = is_menu
+
