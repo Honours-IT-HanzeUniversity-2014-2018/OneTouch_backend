@@ -1,5 +1,5 @@
 from django.db.models import *
-from .gpio import open_door, close_door
+import gpio
 
 class Door(Model):
 	name = CharField('Naam', max_length=128)
@@ -12,6 +12,8 @@ class Door(Model):
 			self.close()
 		else:
 			self.open()
+		self.status = not self.status
+		self.save()
 
 	def open(self):
 		gpio.open_door(self)
